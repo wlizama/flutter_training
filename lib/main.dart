@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_training/animate-container.dart';
 
 void main(List<String> args) {
 	runApp(MaterialApp(
@@ -11,7 +12,7 @@ void main(List<String> args) {
 class Index extends StatelessWidget {
 
 	final _widgetList = [
-		{ 'text': 'Primer Item', 'tap_fun': () {} },
+		{ 'text': 'Animación de container', 'tap_fun': () {} },
 		{ 'text': 'Segundo Item', 'tap_fun': () {} },
 		{ 'text': '3er Item', 'tap_fun': () {} },
 		{ 'text': '4to Item', 'tap_fun': () {} },
@@ -37,7 +38,14 @@ class Index extends StatelessWidget {
 			(widget_item) {
 				return ListTile(
 					title: Text(widget_item['text']),
-					onTap: widget_item['tap_fun'],
+					onTap: () {
+						Navigator.push(
+							context,
+							MaterialPageRoute(
+								builder: (context) => AnimatedContainerApp()
+							)
+						);
+					},
 				);
 			}
 		);
