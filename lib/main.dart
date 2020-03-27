@@ -12,10 +12,10 @@ void main(List<String> args) {
 class Index extends StatelessWidget {
 
 	final _widgetList = [
-		{ 'text': 'Animación de container', 'tap_fun': () {} },
-		{ 'text': 'Segundo Item', 'tap_fun': () {} },
-		{ 'text': '3er Item', 'tap_fun': () {} },
-		{ 'text': '4to Item', 'tap_fun': () {} },
+		{ 'text': 'Animación de container', 'tap_fun': (_) => AnimatedContainerApp() },
+		{ 'text': 'Segundo Item', 'tap_fun': (_) => {} },
+		{ 'text': '3er Item', 'tap_fun': (_) => {} },
+		{ 'text': '4to Item', 'tap_fun': (_) => {} },
 	];
 
 	@override
@@ -42,7 +42,7 @@ class Index extends StatelessWidget {
 						Navigator.push(
 							context,
 							MaterialPageRoute(
-								builder: (context) => AnimatedContainerApp()
+								builder: widget_item['tap_fun']
 							)
 						);
 					},
