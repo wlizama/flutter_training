@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_training/animate-container.dart';
+import 'package:flutter_training/ui-orientation.dart';
 
 void main(List<String> args) {
 	runApp(MaterialApp(
@@ -13,7 +14,7 @@ class Index extends StatelessWidget {
 
 	final _widgetList = [
 		{ 'text': 'Animación de container', 'tap_fun': (_) => AnimatedContainerApp() },
-		{ 'text': 'Segundo Item', 'tap_fun': (_) => {} },
+		{ 'text': 'UI Orientation', 'tap_fun': (_) => UIOrientation() },
 		{ 'text': '3er Item', 'tap_fun': (_) => {} },
 		{ 'text': '4to Item', 'tap_fun': (_) => {} },
 	];
