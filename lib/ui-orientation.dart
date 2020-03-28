@@ -12,7 +12,13 @@ class UIOrientation extends StatelessWidget {
 		return MaterialApp(
 			title: appTitle,
 			home: OrientationList(
-				title: appTitle
+				title: appTitle,
+				leading: IconButton(
+					icon: Icon(Icons.arrow_back),
+					onPressed: () {
+						Navigator.pop(context);
+					}
+				),
 			),
 		);
 	}
@@ -20,14 +26,16 @@ class UIOrientation extends StatelessWidget {
 
 class OrientationList extends StatelessWidget {
 	final String title;
+	final Widget leading;
 
-	OrientationList({ Key key, this.title }) : super(key: key);
+	OrientationList({ Key key, this.title, this.leading }) : super(key: key);
 
 	@override
 	Widget build(BuildContext context) {
 		return Scaffold(
 			appBar: AppBar(
 				title: Text(title),
+				leading: leading,
 			),
 			body: OrientationBuilder(
 				builder: (context, orientation) {
