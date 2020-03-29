@@ -70,3 +70,10 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  fonts:
+    - family: Akronim
+      fonts:
+        - asset: fonts/Akronim/Akronim-Regular.ttf
+    - family: Bungee_Shade
+      fonts:
+        - asset: fonts/Bungee_Shade/BungeeShade-Regular.ttf
