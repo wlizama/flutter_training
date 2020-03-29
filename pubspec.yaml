@@ -77,3 +77,24 @@ flutter:
     - family: Bungee_Shade
       fonts:
         - asset: fonts/Bungee_Shade/BungeeShade-Regular.ttf
+    - family: Faster_One
+      fonts:
+        - asset: fonts/Faster_One/FasterOne-Regular.ttf
+    - family: Flavors
+      fonts:
+        - asset: fonts/Flavors/Flavors-Regular.ttf
+    - family: Frijole
+      fonts:
+        - asset: fonts/Frijole/Frijole-Regular.ttf
+    - family: Press_Start_2P
+      fonts:
+        - asset: fonts/Press_Start_2P/PressStart2P-Regular.ttf
+    - family: Raleway_Dots
+      fonts:
+        - asset: fonts/Raleway_Dots/RalewayDots-Regular.ttf
+    - family: Rock_Salt
+      fonts:
+        - asset: fonts/Rock_Salt/RockSalt-Regular.ttf
+    - family: Tangerine
+      fonts:
+        - asset: fonts/Tangerine/Tangerine-Regular.ttf

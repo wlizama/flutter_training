@@ -23,11 +23,68 @@ class MyFontsPage extends StatelessWidget {
         margin: const EdgeInsets.all(30),
         alignment: Alignment.center,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Text(
-              'Coronavirus buuuhuhhu!',
+              'Coronavirus time!',
               style: TextStyle(
                 fontFamily: 'Akronim',
+                fontSize: 25
+              ),
+            ),
+            Text(
+              'Coronavirus time!',
+              style: TextStyle(
+                fontFamily: 'Bungee_Shade',
+                fontSize: 25
+              ),
+            ),
+            Text(
+              'Coronavirus time!',
+              style: TextStyle(
+                fontFamily: 'Faster_One',
+                fontSize: 25
+              ),
+            ),
+            Text(
+              'Coronavirus time!',
+              style: TextStyle(
+                fontFamily: 'Flavors',
+                fontSize: 25
+              ),
+            ),
+            Text(
+              'Coronavirus time!',
+              style: TextStyle(
+                fontFamily: 'Frijole',
+                fontSize: 25
+              ),
+            ),
+            Text(
+              'Coronavirus time!',
+              style: TextStyle(
+                fontFamily: 'Press_Start_2P',
+                fontSize: 25
+              ),
+            ),
+            Text(
+              'Coronavirus time!',
+              style: TextStyle(
+                fontFamily: 'Raleway_Dots',
+                fontSize: 25
+              ),
+            ),
+            Text(
+              'Coronavirus time!',
+              style: TextStyle(
+                fontFamily: 'Rock_Salt',
+                fontSize: 25
+              ),
+            ),
+            Text(
+              'Coronavirus time!',
+              style: TextStyle(
+                fontFamily: 'Tangerine',
                 fontSize: 25
               ),
             )
