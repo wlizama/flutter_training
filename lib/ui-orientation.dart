@@ -5,9 +5,10 @@ void main() {
 }
 
 class UIOrientation extends StatelessWidget {
-	@override
+	final appTitle = 'UI Orientation demo';
+	
+  @override
 	Widget build(BuildContext context) {
-		final appTitle = 'UI Orientation demo';
 
 		return MaterialApp(
 			title: appTitle,
