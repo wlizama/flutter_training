@@ -15,6 +15,12 @@ class MostrarSnackBar extends StatelessWidget {
 			home: Scaffold(
         appBar: AppBar(
           title: Text(appTitle),
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.pop(context);
+            }
+          ),
         ),
         body: MostrarSnackBarHome(),
 			),
