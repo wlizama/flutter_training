@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_training/animate-container.dart';
 import 'package:flutter_training/export-font-package.dart';
 import 'package:flutter_training/mostrar-drawer.dart';
+import 'package:flutter_training/mostrar-snackbar.dart';
 import 'package:flutter_training/ui-orientation.dart';
 
 void main(List<String> args) {
@@ -19,6 +20,7 @@ class Index extends StatelessWidget {
 		{ 'text': 'UI Orientation', 'tap_fun': (_) => UIOrientation() },
 		{ 'text': 'Exportar fuente de paquete', 'tap_fun': (_) => ExportFontPackage() },
 		{ 'text': 'Mostrar Drawer', 'tap_fun': (_) => MostrarDrawer() },
+		{ 'text': 'Mostrar SnackBar', 'tap_fun': (_) => MostrarSnackBar() },
 	];
 
 	@override
