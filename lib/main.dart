@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_training/animate-container.dart';
 import 'package:flutter_training/export-font-package.dart';
+import 'package:flutter_training/mostrar-drawer.dart';
 import 'package:flutter_training/ui-orientation.dart';
 
 void main(List<String> args) {
@@ -17,7 +18,7 @@ class Index extends StatelessWidget {
 		{ 'text': 'Animación de container', 'tap_fun': (_) => AnimatedContainerApp() },
 		{ 'text': 'UI Orientation', 'tap_fun': (_) => UIOrientation() },
 		{ 'text': 'Exportar fuente de paquete', 'tap_fun': (_) => ExportFontPackage() },
-		{ 'text': '4to Item', 'tap_fun': (_) => {} },
+		{ 'text': 'Mostrar Drawer', 'tap_fun': (_) => MostrarDrawer() },
 	];
 
 	@override
