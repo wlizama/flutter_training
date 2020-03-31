@@ -28,6 +28,10 @@ class Index extends StatelessWidget {
 	@override
 	Widget build(BuildContext context) {
 		return MaterialApp(
+      theme: ThemeData(
+        primaryColor: Colors.green,
+        accentColor: Colors.lime
+      ),
 			title: 'Index List',
 			home: Scaffold(
 				appBar: AppBar(

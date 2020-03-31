@@ -26,6 +26,7 @@ class _AnimatedContainerAppState extends State<AnimatedContainerApp> {
 							Navigator.pop(context);
 						}
 					),
+          backgroundColor: Theme.of(context).primaryColor,
 				),
 				body: Center(
 					child: AnimatedContainer(
@@ -60,6 +61,7 @@ class _AnimatedContainerAppState extends State<AnimatedContainerApp> {
 							);
 						});
 					},
+          backgroundColor: Theme.of(context).accentColor,
 				),
 			),
 		);

@@ -37,6 +37,7 @@ class OrientationList extends StatelessWidget {
 			appBar: AppBar(
 				title: Text(title),
 				leading: leading,
+        backgroundColor: Theme.of(context).primaryColor,
 			),
 			body: OrientationBuilder(
 				builder: (context, orientation) {

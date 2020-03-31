@@ -25,6 +25,7 @@ class VistaTabs extends StatelessWidget {
                 Navigator.pop(context);
               }
             ),
+            backgroundColor: Theme.of(context).primaryColor,
           ),
           body: TabBarView(
             children: <Widget>[
