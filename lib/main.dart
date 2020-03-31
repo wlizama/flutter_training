@@ -4,6 +4,7 @@ import 'package:flutter_training/export-font-package.dart';
 import 'package:flutter_training/mostrar-drawer.dart';
 import 'package:flutter_training/mostrar-snackbar.dart';
 import 'package:flutter_training/ui-orientation.dart';
+import 'package:flutter_training/vista-tabs.dart';
 
 void main(List<String> args) {
 	runApp(MaterialApp(
@@ -21,6 +22,7 @@ class Index extends StatelessWidget {
 		{ 'text': 'Exportar fuente de paquete', 'tap_fun': (_) => ExportFontPackage() },
 		{ 'text': 'Mostrar Drawer', 'tap_fun': (_) => MostrarDrawer() },
 		{ 'text': 'Mostrar SnackBar', 'tap_fun': (_) => MostrarSnackBar() },
+		{ 'text': 'Vista con Tabs', 'tap_fun': (_) => VistaTabs() },
 	];
 
 	@override
