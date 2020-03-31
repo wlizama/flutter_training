@@ -19,6 +19,12 @@ class VistaTabs extends StatelessWidget {
               ],
             ),
             title: Text('Tab View demo'),
+            leading: IconButton(
+              icon: Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.pop(context);
+              }
+            ),
           ),
           body: TabBarView(
             children: <Widget>[
