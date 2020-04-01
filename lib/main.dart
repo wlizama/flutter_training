@@ -3,6 +3,7 @@ import 'package:flutter_training/animate-container.dart';
 import 'package:flutter_training/export-font-package.dart';
 import 'package:flutter_training/mostrar-drawer.dart';
 import 'package:flutter_training/mostrar-snackbar.dart';
+import 'package:flutter_training/pagina-route.dart';
 import 'package:flutter_training/ui-orientation.dart';
 import 'package:flutter_training/vista-tabs.dart';
 
@@ -23,6 +24,7 @@ class Index extends StatelessWidget {
 		{ 'text': 'Mostrar Drawer', 'tap_fun': (_) => MostrarDrawer() },
 		{ 'text': 'Mostrar SnackBar', 'tap_fun': (_) => MostrarSnackBar() },
 		{ 'text': 'Vista con Tabs', 'tap_fun': (_) => VistaTabs() },
+		{ 'text': 'Pagina Route', 'tap_fun': (_) => PaginaRoute() },
 	];
 
 	@override
