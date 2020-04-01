@@ -1,39 +1,12 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(ExportFontPackage());
-
 class ExportFontPackage extends StatelessWidget {
-  final appTitle = 'Export Fonts Package';
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: appTitle,
-      home: MyFontsPage(
-        title: appTitle,
-        leading: IconButton(
-					icon: Icon(Icons.arrow_back),
-					onPressed: () {
-						Navigator.pop(context);
-					}
-				),
-      ),
-    );
-  }
-}
-
-class MyFontsPage extends StatelessWidget {
-  final String title;
-	final Widget leading;
-
-	MyFontsPage({ Key key, this.title, this.leading }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
-        leading: leading
+        title: Text('Export Fonts Package'),
       ),
       body: Container(
         margin: const EdgeInsets.all(30),

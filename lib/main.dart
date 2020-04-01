@@ -7,57 +7,50 @@ import 'package:flutter_training/pagina-route.dart';
 import 'package:flutter_training/ui-orientation.dart';
 import 'package:flutter_training/vista-tabs.dart';
 
+final _widgetList = [
+  { 'path': '/', 'title': 'Main Page', 'widget': Index() },
+  { 'path': '/animation-container', 'title': 'Animación de container', 'widget': AnimatedContainerApp() },
+  { 'path': '/ui-orientation', 'title': 'UI Orientation', 'widget': UIOrientation() },
+  { 'path': '/exp-font-pkg', 'title': 'Exportar fuente de paquete', 'widget': ExportFontPackage() },
+  { 'path': '/show-drawer', 'title': 'Mostrar Drawer', 'widget': MostrarDrawer() },
+  { 'path': '/show-snakbar', 'title': 'Mostrar SnackBar', 'widget': MostrarSnackBar() },
+  { 'path': '/view-with-tabs', 'title': 'Vista con Tabs', 'widget': VistaTabs() },
+  { 'path': '/route-page', 'title': 'Pagina Route', 'widget': PaginaRoute() },
+];
+
 void main(List<String> args) {
 	runApp(MaterialApp(
 		title: 'Flutter Training',
-		home: Index(),
+		initialRoute: '/',
+    routes: {
+      for(var wl in _widgetList) wl['path']: (context) => wl['widget']
+    },
+    theme: ThemeData(
+      primaryColor: Colors.green,
+      accentColor: Colors.lime
+    ),
 	));
 }
 
-
 class Index extends StatelessWidget {
-
-	final _widgetList = [
-		{ 'text': 'Animación de container', 'tap_fun': (_) => AnimatedContainerApp() },
-		{ 'text': 'UI Orientation', 'tap_fun': (_) => UIOrientation() },
-		{ 'text': 'Exportar fuente de paquete', 'tap_fun': (_) => ExportFontPackage() },
-		{ 'text': 'Mostrar Drawer', 'tap_fun': (_) => MostrarDrawer() },
-		{ 'text': 'Mostrar SnackBar', 'tap_fun': (_) => MostrarSnackBar() },
-		{ 'text': 'Vista con Tabs', 'tap_fun': (_) => VistaTabs() },
-		{ 'text': 'Pagina Route', 'tap_fun': (_) => PaginaRoute() },
-	];
-
-	@override
-	Widget build(BuildContext context) {
-		return MaterialApp(
-      theme: ThemeData(
-        primaryColor: Colors.green,
-        accentColor: Colors.lime
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('My Index List'),
       ),
-			title: 'Index List',
-			home: Scaffold(
-				appBar: AppBar(
-					title: Text('My Index List'),
-				),
-				body: _buildListViews(context),
-			),
-		);
-	}
+      body: _buildListViews(context),
+    );
+  }
 
-
-	Widget _buildListViews(context) {
+  Widget _buildListViews(context) {
 
 		final wlist = _widgetList.map(
 			(widget_item) {
 				return ListTile(
-					title: Text(widget_item['text']),
+					title: Text(widget_item['title']),
 					onTap: () {
-						Navigator.push(
-							context,
-							MaterialPageRoute(
-								builder: widget_item['tap_fun']
-							)
-						);
+            Navigator.pushNamed(context, widget_item['path']);
 					},
 				);
 			}
@@ -67,7 +60,6 @@ class Index extends StatelessWidget {
 			context: context,
 			tiles: wlist
 		).toList();
-
 
 		return ListView(
 			padding: const EdgeInsets.all(8),

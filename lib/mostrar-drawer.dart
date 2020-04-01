@@ -1,42 +1,12 @@
 import 'package:flutter/material.dart';
 
-void main() {
-	runApp(MostrarDrawer());
-}
-
 class MostrarDrawer extends StatelessWidget {
-  final appTitle = 'Drawer demo';
-	
-  @override
-	Widget build(BuildContext context) {
-
-		return MaterialApp(
-			title: appTitle,
-			home: MostrarDrawerHome(
-				title: appTitle,
-				leading: IconButton(
-					icon: Icon(Icons.arrow_back),
-					onPressed: () {
-						Navigator.pop(context);
-					}
-				),
-			),
-		);
-	}
-}
-
-class MostrarDrawerHome extends StatelessWidget {
-	final String title;
-	final Widget leading;
-
-	MostrarDrawerHome({ Key key, this.title, this.leading }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
-        leading: leading,
+        title: Text('Drawer demo'),
       ),
       body: Center(
         child: Text('Desliza de izquierda a derecha para mostrar drawer')
