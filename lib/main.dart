@@ -26,8 +26,8 @@ void main(List<String> args) {
       for(var wl in _widgetList) wl['path']: (context) => wl['widget']
     },
     theme: ThemeData(
-      primaryColor: Colors.green,
-      accentColor: Colors.lime
+      primaryColor: Colors.indigoAccent,
+      accentColor: Colors.orange
     ),
 	));
 }
@@ -37,7 +37,7 @@ class Index extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('My Index List'),
+        title: Text('My Index List con mote'),
       ),
       body: _buildListViews(context),
     );
