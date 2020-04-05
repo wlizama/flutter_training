@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_training/animate-container.dart';
 import 'package:flutter_training/export-font-package.dart';
+import 'package:flutter_training/form-validation.dart';
 import 'package:flutter_training/mostrar-drawer.dart';
 import 'package:flutter_training/mostrar-snackbar.dart';
 import 'package:flutter_training/pagina-route.dart';
@@ -16,6 +17,7 @@ final _widgetList = [
   { 'path': '/show-snakbar', 'title': 'Mostrar SnackBar', 'widget': MostrarSnackBar() },
   { 'path': '/view-with-tabs', 'title': 'Vista con Tabs', 'widget': VistaTabs() },
   { 'path': '/route-page', 'title': 'Pagina Route', 'widget': PaginaRoute() },
+  { 'path': '/form-validation', 'title': 'Form Validation', 'widget': FirstFormValidation },
 ];
 
 void main(List<String> args) {
