@@ -27,35 +27,39 @@ class _FirstFormValidationInputState extends State<FirstFormValidation> {
       appBar: AppBar(
         title: Text('First Form validation'),
       ), 
-      body: Form(
-        key: _formkey,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            TextFormField(
-              validator: (value) {
-                if (value.isEmpty) {
-                  return 'Este valor no puede estar vacio';
-                }
-              },
+      body: Builder(
+        builder: (BuildContext context) {
+          return Form(
+            key: _formkey,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                TextFormField(
+                  validator: (value) {
+                    if (value.isEmpty) {
+                      return 'Este valor no puede estar vacio';
+                    }
+                  },
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 16.0),
+                  child: RaisedButton(
+                    onPressed: () {
+                      if (_formkey.currentState.validate()) {
+                        Scaffold.of(context).showSnackBar(
+                          SnackBar(
+                            content: Text('Procesando'),
+                          )
+                        );
+                      }
+                    },
+                    child: Text('submit'),
+                  ),
+                )
+              ],
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 16.0),
-              child: RaisedButton(
-                onPressed: () {
-                  if (_formkey.currentState.validate()) {
-                    Scaffold.of(context).showSnackBar(
-                      SnackBar(
-                        content: Text('Procesando'),
-                      )
-                    );
-                  }
-                },
-                child: Text('submit'),
-              ),
-            )
-          ],
-        ),
+          );
+        }
       )
     );
   }
