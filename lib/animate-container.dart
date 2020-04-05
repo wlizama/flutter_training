@@ -19,12 +19,6 @@ class _AnimatedContainerAppState extends State<AnimatedContainerApp> {
 		return Scaffold(
       appBar: AppBar(
         title: Text('Animación demo'),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pop(context);
-          }
-        ),
       ),
       body: Center(
         child: AnimatedContainer(

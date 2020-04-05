@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 
-class FirstFormValidation extends StatelessWidget {
+// class FirstFormValidation extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     final appTitle = 'First Form validation';
+//     return Scaffold(
+//         appBar: AppBar(
+//           title: Text(appTitle),
+//         ),
+//         body: FirstFormValidationInput(),
+//       );
+//   }
+// }
+
+class FirstFormValidation extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    final appTitle = 'First Form validation';
-    return Scaffold(
-        appBar: AppBar(
-          title: Text(appTitle),
-        ),
-        body: _FirstFormValidation(),
-      );
-  }
+  _FirstFormValidationInputState createState() => _FirstFormValidationInputState();
 }
 
-class _FirstFormValidation extends StatefulWidget {
-  @override
-  _FirstFormValidationState createState() => _FirstFormValidationState();
-}
-
-class _FirstFormValidationState extends State<_FirstFormValidation> {
+class _FirstFormValidationInputState extends State<FirstFormValidation> {
   final _formkey = GlobalKey<FormState>();
 
   @override
