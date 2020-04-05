@@ -23,35 +23,40 @@ class _FirstFormValidationInputState extends State<FirstFormValidation> {
 
   @override
   Widget build(BuildContext context) {
-    return Form(
-      key: _formkey,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          TextFormField(
-            validator: (value) {
-              if (value.isEmpty) {
-                return 'Este valor no puede estar vacio';
-              }
-            },
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 16.0),
-            child: RaisedButton(
-              onPressed: () {
-                if (_formkey.currentState.validate()) {
-                  Scaffold.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text('Procesando'),
-                    )
-                  );
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('First Form validation'),
+      ), 
+      body: Form(
+        key: _formkey,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            TextFormField(
+              validator: (value) {
+                if (value.isEmpty) {
+                  return 'Este valor no puede estar vacio';
                 }
               },
-              child: Text('submmit'),
             ),
-          )
-        ],
-      ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 16.0),
+              child: RaisedButton(
+                onPressed: () {
+                  if (_formkey.currentState.validate()) {
+                    Scaffold.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text('Procesando'),
+                      )
+                    );
+                  }
+                },
+                child: Text('submit'),
+              ),
+            )
+          ],
+        ),
+      )
     );
   }
 }

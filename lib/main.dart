@@ -17,7 +17,7 @@ final _widgetList = [
   { 'path': '/show-snakbar', 'title': 'Mostrar SnackBar', 'widget': MostrarSnackBar() },
   { 'path': '/view-with-tabs', 'title': 'Vista con Tabs', 'widget': VistaTabs() },
   { 'path': '/route-page', 'title': 'Pagina Route', 'widget': PaginaRoute() },
-  { 'path': '/form-validation-rq', 'title': 'Form Validation', 'widget': FirstFormValidation },
+  { 'path': '/form-validation-rq', 'title': 'Form Validation', 'widget': FirstFormValidation() },
 ];
 
 void main(List<String> args) {
