@@ -1,18 +1,5 @@
 import 'package:flutter/material.dart';
 
-// class FirstFormValidation extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     final appTitle = 'First Form validation';
-//     return Scaffold(
-//         appBar: AppBar(
-//           title: Text(appTitle),
-//         ),
-//         body: FirstFormValidationInput(),
-//       );
-//   }
-// }
-
 class FirstFormValidation extends StatefulWidget {
   @override
   _FirstFormValidationInputState createState() => _FirstFormValidationInputState();
@@ -99,10 +86,13 @@ class _FirstFormValidationInputState extends State<FirstFormValidation> {
                     child: RaisedButton(
                       onPressed: () {
                         if (_formkey.currentState.validate()) {
-                          Scaffold.of(context).showSnackBar(
-                            SnackBar(
-                              content: Text('Procesando'),
-                            )
+                          return showDialog(
+                            context: context,
+                            builder: (context) {
+                              return AlertDialog(
+                                content: Text('Email ${myControler.text} registrado exitosamente!'),
+                              );
+                            }
                           );
                         }
                         else {
