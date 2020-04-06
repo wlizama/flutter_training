@@ -35,6 +35,11 @@ class _FirstFormValidationInputState extends State<FirstFormValidation> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 TextFormField(
+                  decoration: InputDecoration(
+                    // border: InputBorder.none,
+                    hintText: 'Ejm: Wily Colon',
+                    labelText: 'Nombre a buscar'
+                  ),
                   validator: (value) {
                     if (value.isEmpty) {
                       return 'Este valor no puede estar vacio';
