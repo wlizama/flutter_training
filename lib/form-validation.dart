@@ -20,6 +20,7 @@ class FirstFormValidation extends StatefulWidget {
 
 class _FirstFormValidationInputState extends State<FirstFormValidation> {
   final _formkey = GlobalKey<FormState>();
+  final myControler = TextEditingController();
   FocusNode myFocusNode;
 
   @override
@@ -27,13 +28,19 @@ class _FirstFormValidationInputState extends State<FirstFormValidation> {
     super.initState();
     // crea el focus node
     myFocusNode = FocusNode();
+    myControler.addListener(_printLatestValue);
   }
 
   @override
   void dispose() {
     // limpia focus node cuando se cierre el formulario
     myFocusNode.dispose();
+    myControler.dispose();
     super.dispose();
+  }
+
+  _printLatestValue() {
+    print('Field value listened: ${myControler.text}');
   }
 
   @override
@@ -69,6 +76,10 @@ class _FirstFormValidationInputState extends State<FirstFormValidation> {
                       hintText: '00',
                       labelText: 'Edad'
                     ),
+                    keyboardType: TextInputType.number,
+                    onChanged: (text) {
+                      print('edad cambio $text');
+                    },
                   ),
                   TextFormField(
                     decoration: InputDecoration(
@@ -80,6 +91,8 @@ class _FirstFormValidationInputState extends State<FirstFormValidation> {
                         return 'Este valor no puede estar vacio';
                       }
                     },
+                    keyboardType: TextInputType.emailAddress,
+                    controller: myControler,
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 16.0),
