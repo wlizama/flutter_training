@@ -10,8 +10,10 @@ class MyFloatingAppBar extends StatelessWidget {
           SliverAppBar(
             title: Text('My floating appbar'),
             floating: true,
-            flexibleSpace: Placeholder(),
-            expandedHeight: 200,
+            flexibleSpace: Image.network(
+              'https://picsum.photos/640/320'
+            ),
+            expandedHeight: 180,
           ),
           SliverList(
             delegate: SliverChildBuilderDelegate(
