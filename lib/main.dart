@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_training/animate-container.dart';
 import 'package:flutter_training/export-font-package.dart';
+import 'package:flutter_training/floating-app-bar.dart';
 import 'package:flutter_training/form-validation.dart';
 import 'package:flutter_training/mostrar-drawer.dart';
 import 'package:flutter_training/mostrar-snackbar.dart';
@@ -18,6 +19,7 @@ final _widgetList = [
   { 'path': '/view-with-tabs', 'title': 'Vista con Tabs', 'widget': VistaTabs() },
   { 'path': '/route-page', 'title': 'Pagina Route', 'widget': PaginaRoute() },
   { 'path': '/form-validation-rq', 'title': 'Form Validation', 'widget': FirstFormValidation() },
+  { 'path': '/floating-app-bar', 'title': 'Floating Appbar', 'widget': MyFloatingAppBar() },
 ];
 
 void main(List<String> args) {
