@@ -9,7 +9,7 @@ import 'package:flutter_training/pagina-route.dart';
 import 'package:flutter_training/ui-orientation.dart';
 import 'package:flutter_training/vista-tabs.dart';
 
-final _widgetList = [
+final List<Map<String, dynamic>> _widgetList = [
   { 'path': '/', 'title': 'Main Page', 'widget': Index() },
   { 'path': '/animation-container', 'title': 'Animación de container', 'widget': AnimatedContainerApp() },
   { 'path': '/ui-orientation', 'title': 'UI Orientation', 'widget': UIOrientation() },
@@ -27,11 +27,11 @@ void main(List<String> args) {
 		title: 'Flutter Training',
 		initialRoute: '/',
     routes: {
-      for(var wl in _widgetList) wl['path']: (context) => wl['widget']
+      for(final wl in _widgetList) wl['path']: (context) => wl['widget']
     },
     theme: ThemeData(
       primaryColor: Colors.indigoAccent,
-      accentColor: Colors.orange
+      // accentColor: Colors.orange
     ),
 	));
 }

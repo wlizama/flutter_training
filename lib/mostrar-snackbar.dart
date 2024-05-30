@@ -13,7 +13,7 @@ class MostrarSnackBar extends StatelessWidget {
       body: Builder(
         builder: (BuildContext context) {
           return Center(
-            child: RaisedButton(
+            child: ElevatedButton(
               onPressed: () {
                 final snackbar = SnackBar(
                   content: Text('Hola soy un SnackBar ;)'),
@@ -26,7 +26,9 @@ class MostrarSnackBar extends StatelessWidget {
                 );
 
                 // Encuentra el Scaffold en el árbol de widgets y ¡úsalo para mostrar un SnackBar!
-                Scaffold.of(context).showSnackBar(snackbar);
+                // Scaffold.of(context).showSnackBar(snackbar);
+                ScaffoldMessenger.of(context).showSnackBar(snackbar);
+
               },
               child: Text('Mostrar SnackBar!!!'),
             )

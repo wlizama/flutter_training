@@ -9,7 +9,7 @@ class PaginaRoute extends StatelessWidget {
         backgroundColor: Theme.of(context).primaryColor,
       ),
       body: Center(
-        child: RaisedButton(
+        child: ElevatedButton(
           onPressed: () {},
           child: Text('Click on me ;9'),
         ),

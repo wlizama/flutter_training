@@ -8,7 +8,7 @@ class FirstFormValidation extends StatefulWidget {
 class _FirstFormValidationInputState extends State<FirstFormValidation> {
   final _formkey = GlobalKey<FormState>();
   final myControler = TextEditingController();
-  FocusNode myFocusNode;
+  FocusNode myFocusNode = FocusNode();
 
   @override
   void initState() {
@@ -53,7 +53,7 @@ class _FirstFormValidationInputState extends State<FirstFormValidation> {
                       labelText: 'Nombre'
                     ),
                     validator: (value) {
-                      if (value.isEmpty) {
+                      if (value?.isEmpty ?? true) {
                         return 'Este valor no puede estar vacio';
                       }
                     },
@@ -74,7 +74,7 @@ class _FirstFormValidationInputState extends State<FirstFormValidation> {
                       labelText: 'e-mail'
                     ),
                     validator: (value) {
-                      if (value.isEmpty) {
+                      if (value?.isEmpty ?? true) {
                         return 'Este valor no puede estar vacio';
                       }
                     },
@@ -83,10 +83,10 @@ class _FirstFormValidationInputState extends State<FirstFormValidation> {
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 16.0),
-                    child: RaisedButton(
+                    child: ElevatedButton(
                       onPressed: () {
-                        if (_formkey.currentState.validate()) {
-                          return showDialog(
+                        if (_formkey.currentState?.validate() ?? false) {
+                          showDialog<void>(
                             context: context,
                             builder: (context) {
                               return AlertDialog(
